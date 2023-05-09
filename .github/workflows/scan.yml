@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: npm install
+        run: npm install
       - name: Audit JS
         run: npx auditjs@latest ossi
       - name: Audit packages
